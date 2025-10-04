@@ -1,0 +1,49 @@
+{
+  "mcpServers": {
+    "postman": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "POSTMAN_API_KEY",
+        "mcp/postman"
+      ],
+      "env": {
+        "POSTMAN_API_KEY": "YOUR_POSTMAN_API_KEY_HERE"
+      }
+    },
+    "obsidian": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "OBSIDIAN_HOST",
+        "-e",
+        "OBSIDIAN_API_KEY",
+        "mcp/obsidian"
+      ],
+      "env": {
+        "OBSIDIAN_HOST": "host.docker.internal",
+        "OBSIDIAN_API_KEY": "YOUR_OBSIDIAN_API_KEY_HERE"
+      }
+    },
+    "github-official": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "ghcr.io/github/github-mcp-server"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "YOUR_GITHUB_TOKEN_HERE"
+      }
+    }
+  }
+}
